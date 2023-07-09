@@ -1,0 +1,79 @@
+.top{
+    background-color: #ff6600;
+}
+.storySection{
+    background-color: rgba(246,246,239,255);
+}
+.userInfoSection{
+    background-color: rgba(246,246,239,255);
+}
+.loginForm{
+    background-color: rgba(246,246,239,255);
+}
+.signUpForm{
+    background-color: rgba(246,246,239,255);
+}
+.loading{
+    background-color: rgba(246,246,239,255);
+}
+.createStoryForm{
+    background-color: rgba(246,246,239,255);
+}
+.userFavoriteSection{
+    background-color: rgba(246,246,239,255);
+}
+.userStoriesSection{
+    background-color: rgba(246,246,239,255);
+}
+.storyURL{
+    color: lightgray;
+    font-size: 50%;
+}
+.brand:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.loginButton:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.submitButton:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.favoritesButton:hover{
+    text-decoration: underline;
+    cursor: pointer; 
+}
+.storiesButton:hover{
+    text-decoration: underline;
+    cursor: pointer; 
+}
+
+.userProfileButton:hover{
+    text-decoration: underline;
+    cursor: pointer; 
+}
+.logoutButton:hover{
+    text-decoration: underline;
+    cursor: pointer; 
+}
+.star:hover{
+    cursor: pointer; 
+}
+.favorited:hover{
+    cursor: pointer; 
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+img:hover{
+    cursor: pointer;
+}
+.star:after{
+    content: '☆';
+}
+.favorited:after{
+    content: '★';
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/logo.webp">
+    <title>Hack or Snooze</title>
+</head>
+<body>
+    
+
+    <section class="mt-md-1 pt-md-1">
+        <div class="container-lg col-md-8 col-12">
+            <div class="row">
+
+                    <!-- NAVBAR  -->
+                    <nav class="navbar top d-flex justify-content-between">
+                        <div class="brand ms-2 fw-bold">
+                            Hack or Snooze
+                        </div>
+
+
+                        <div class="d-flex">
+                            <div class="submitButton mx-md-3 mx-1">
+                                Submit
+                            </div>
+                            <div class="favoritesButton mx-md-3 mx-1">
+                                Favorites
+                            </div>
+                            <div class="storiesButton mx-md-3 mx-1">
+                                My Stories
+                            </div>
+                        </div>
+
+                        <div class="me-2 loginButton hidden">
+                            Login / Signup
+                        </div>
+
+                        <div class="userSection hidden ">
+                            <span class="userProfileButton hidden">
+                                
+                            </span>
+                            <span class="me-2 logoutButton hidden">
+                                Logout
+                            </span>
+                        </div>
+                    </nav>
+                    
+                    <!-- LOGIN FORM -->
+                    <div class="loginForm ps-5 py-3 hidden">
+                        <div class="h6 fw-bold py-2">
+                            Login
+                        </div>
+                        <div class="d-flex justify-content-start col-md-6 col-12 flex-column">
+                            <form>
+                            <div class="py-2">
+                                username <input type="text" class="usernameInput input ms-2">
+                            </div>
+
+                            <div class="py-2">
+                                password <input type="password" class="passwordInput input ms-2">
+                            </div>
+
+                            <div>
+                                <button class="btn btn-secondary">Login</button>
+                            </div>
+                        </form>
+                        </div> <hr>
+                    </div>
+
+                    <!-- SIGN UP FORM -->
+                    <div class="signUpForm ps-5 py-3 hidden">
+                        <div class="d-flex justify-content-start col-md-6 col-12 flex-column">
+                            <div class="h6 fw-bold py-2">
+                                Sign Up
+                            </div>
+
+                            <form class="createAccountForm">
+                            <div class="py-2">
+                                name <input type="text" class="creatingNameInput ms-5">
+                            </div>
+                            <div class="py-2">
+                                username <input type="text" class="creatingUsernameInput ms-3">
+                            </div>
+
+                            <div class="py-2">
+                                password <input type="password" class="creatingPasswordInput ms-3">
+                            </div>
+
+                            <div>
+                                <button class="btn btn-secondary">Create Account</button>
+                            </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <!-- CREATE STORY FORM -->
+                    <div class="createStoryForm ps-5 py-3 hidden">
+                        <div class="d-flex justify-content-start col-md-6 col-12 flex-column">
+                            <form>
+                            <div class="py-2">
+                                author <input type="text" class="authorInput input " placeholder="author name">
+                            </div>
+
+                            <div class="py-2">
+                                title <input type="text" class="titleInput input ms-3" placeholder="story title">
+                            </div>
+
+                            <div class="py-2">
+                                url <input type="text" class="urlInput input ms-4" placeholder="story url">
+                            </div>
+
+                            <div>
+                                <button class="btn btn-secondary">Submit</button>
+                            </div>
+                        </form>
+                        </div> <hr>
+                    </div>
+
+                    <!-- STORY LIST -->
+                    <div class="storySection p-4 hidden">
+                        <ul class="storiesList">
+                            
+                        </ul>
+                    </div>
+
+                    <!-- FAVORITES INFORMATION -->
+                    <div class="userFavoriteSection p-4 hidden ">
+                        <div class="h6 fw-bold py-1">
+                            Favorites
+                        </div> <br>
+    
+                        <ul class="userFavoriteContainer">
+                            <li class="defaultUserStory hidden">No favorites</li>
+                        </ul>
+                    </div>
+
+                    <!-- USER STORIES INFORMATION -->
+                    <div class="userStoriesSection p-4 hidden ">
+                        <div class="h6 fw-bold py-1">
+                            My Stories
+                        </div> <br>
+    
+                            <ul class="userStoryContainer">
+                                <li class="defaultUserStory hidden">no stories added by user yet!</li>
+                            </ul>
+                        
+                    </div>
+
+                    <!-- USER PROFILE INFORMATION -->
+                    <div class="userInfoSection p-4 hidden ">
+                        <div class="h6 fw-bold py-1">
+                            User Information
+                        </div> <br>
+    
+                            <ul class="userInfoContainer">
+                                <li class="liOne"></li>
+                                <li class="liTwo"></li>
+                                <li class="liThree"></li>
+                            </ul>
+                        
+                    </div>
+
+
+                </div>
+            </div>  
+    </section>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/axios/dist/axios.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
