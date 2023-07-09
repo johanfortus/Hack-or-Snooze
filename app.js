@@ -30,6 +30,7 @@ let $userInfoSection = $('.userInfoSection')
 
 let $storyList = $('.storiesList')
 
+let $starButton = $('.starButton')
 
 // STORY LIST
 async function storyList(){
@@ -47,26 +48,38 @@ async function storyList(){
         // Favoriting a Story Functionality
         let $starButton = $('.starButton')
         $starButton.on('click', async function(e){
-            console.log(e.target.classList[1])
-            let storyID = e.target.classList[1]
-            
-            if(e.target.classList[2] === 'star'){
-                e.target.classList.remove('star')
-                e.target.classList.add('favorited')
-                let token = localStorage.getItem('token')
-                let res = await axios.post(`https://hack-or-snooze-v3.herokuapp.com/users/${localStorage.getItem('Username')}/favorites/${storyID}`, localStorage.getItem('Username'), { params: { token } })
-                console.log(res)
+            if(localStorage.getItem('Username') === null){
+                $storySection.hide()
+                $userFavoriteSection.hide()
+                $loginForm.show()
+                $signUpForm.show()
+                let timer = setTimeout(function(){
+                    alert('Login or create an account to favorite!')
+                }, 50)
             }
-    
             else{
-                e.target.classList.remove('favorited')
-                e.target.classList.add('star')
-                let token = localStorage.getItem('token')
-                let username = localStorage.getItem('Username')
-                let res = await axios.delete(`https://hack-or-snooze-v3.herokuapp.com/users/${username}/favorites/${storyID}`, { params: { token } })
-                console.log(res)
+                console.log(e.target.classList[1])
+                let storyID = e.target.classList[1]
+                
+                if(e.target.classList[2] === 'star'){
+                    e.target.classList.remove('star')
+                    e.target.classList.add('favorited')
+                    let token = localStorage.getItem('token')
+                    let res = await axios.post(`https://hack-or-snooze-v3.herokuapp.com/users/${localStorage.getItem('Username')}/favorites/${storyID}`, localStorage.getItem('Username'), { params: { token } })
+                    console.log(res)
+                }
+        
+                else{
+                    e.target.classList.remove('favorited')
+                    e.target.classList.add('star')
+                    let token = localStorage.getItem('token')
+                    let username = localStorage.getItem('Username')
+                    let res = await axios.delete(`https://hack-or-snooze-v3.herokuapp.com/users/${username}/favorites/${storyID}`, { params: { token } })
+                    console.log(res)
+                }
             }
-        })
+            }
+        )
         ifFavorited()
 }
 
@@ -527,6 +540,8 @@ $userInfoSection.hide()
 
 
 $userProfileButton.hide()
+
+
 
 $loginButton.show()
 storyList()
