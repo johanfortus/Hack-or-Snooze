@@ -23,4 +23,5 @@ You can visit the website [here](https://johanfortus.github.io/Hack-or-Snooze/).
 
 - [Hack or Snooze API](https://hackorsnoozev3.docs.apiary.io/#)
 
+<img src="https://github.com/johanfortus/Hack-or-Snooze/blob/main/assets/HackOrSnooze.JPG" /> 
 
