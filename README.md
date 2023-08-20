@@ -3,7 +3,9 @@ Hacker News Clone - Frontend App
 
 ## Summary
 
-Developed as part of a coursework project for the Springboard bootcamp, Hack or Snooze is a clone of the popular Hacker News platform, designed to replicate its core features and functionalities. 
+Developed as part of a coursework project for the Springboard bootcamp.
+
+Hack or Snooze is a clone of the popular Hacker News platform, designed to replicate its core features and functionalities. 
 
 A modular, cross-platform web application built using JavaScript. It leverages AJAX communication between the client and the Hack or Snooze API, facilitated by the Axios library.
 
